@@ -64,11 +64,11 @@ class ModelTests(TestCase):
             'testpass123'
         )
         recipe = models.Recipe.objects.create(
-            user = user,
-            title = 'Sample recipe name',
-            time_minutes = 5,
-            price = Decimal('5.50'),
-            description = 'Sample recipe description'
+            user=user,
+            title='Sample recipe name',
+            time_minutes=5,
+            price=Decimal('5.50'),
+            description='Sample recipe description'
         )
 
         self.assertEqual(str(recipe), recipe.title)
@@ -84,8 +84,8 @@ class ModelTests(TestCase):
         """Test creating an ingredient is successful."""
         user = create_user()
         ingredient = models.Ingredient.objects.create(
-            user = user,
-            name = 'Ingredient1'
+            user=user,
+            name='Ingredient1'
         )
 
         self.assertEqual(str(ingredient), ingredient.name)
